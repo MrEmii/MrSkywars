@@ -1,0 +1,127 @@
+#Variables: '&' for color. '{error}' for debug error.
+#'{game}' for display game name. '{maxplayers}' for get maxplayers.
+#'{spawns}' for display spawns|maxspawns.
+#'{player}' display player name.'{players}' get in game players .'{maxplayers}' get maxplayers.
+#'{murder}' display murder name.
+formats:
+  spawns: '{players}/{maxplayers}'
+  date: '{day}/{month}/{year}'
+  time: '{minutes}:{seconds}'
+messages:
+  #private
+  errormessage: '&6[&6&lMrSkywars&6] &cError occurred while executing line: &e{error}&c.'
+  playerjoin: '&aSuccessfully joined in game &a&l{game}'
+  playerleave: '&aSuccessfully leaved from game &a&l{game}'
+  #broadcasts
+  deaths:
+    playerdeathunknown: '§e{player} §ajust die.'
+    playerdeathnyplayer: '§e{player} §awas killed by §a{murder}'
+    playerdeathbyvoid: '§e{player} §awas killed by the void'
+    playerdeathbyarrow: '§e{player} §awas killed by §bthe murder arrow'
+    playerdeathbyexplosive: '§e{player} §awas died flying'
+  playerleavebroadcast: '&c{player} leave from game &7{spawns}'
+  playerjoinbroadcast: '&a{player} joined! &7{spawns}'
+  winnermessage:
+    - "&m-------------------------------------------"
+    - "&aCongratulations {player} winner this match!"
+    - "       &aMap: {game}"
+    - "       &aKills by {player}: {kills}"
+    - "&m-------------------------------------------"
+#Scoreabord supports multiple lines in title
+#Max 15 lines in body content
+#All  lines needs to be in an array. for empty use '[]'
+#Variables:
+#{user} display name of current player
+#{coins} display coins of current player
+#{exp} display experience of current player
+#{lvl} display level of current player
+#{wins} display total wins of current player
+#{kills} display currents kills of current player
+#{tk} display total kills of current player
+#{deaths} display total deaths of current player
+#{map} display current map name
+#{date} display format date
+#{time} display format time
+#{refill} display time for refill
+#{minutes} display minutes
+#{seconds} display seconds
+
+scoreboard:
+  lobby:
+    title:
+      - '&l&eSKYWARS'
+      - '&l&6S&eKYWARS'
+      - '&l&fS&6K&eYWARS'
+      - '&l&fSK&6Y&eWARS'
+      - '&l&fSKY&6W&eARS'
+      - '&l&fSKYW&6A&eRS'
+      - '&l&fSKYWA&6R&eS'
+      - '&l&fSKYWA&6R&eS'
+      - '&l&fSKYWAR&6S'
+      - '&l&eSKYWARS'
+      - '&l&fSKYWARS'
+      - '&l&eSKYWARS'
+      - '&l&eSKYWARS'
+    lines:
+      - '&f'
+      - '&fYour level: {lvl}'
+      - '{blank}'
+      - '&fKills: {tk}'
+      - '&fWins: {wins}'
+      - '{blank}'
+      - '&7Coins: &6{coins}'
+      - '&ewww.server.net'
+
+  ingame:
+    waiting:
+      title:
+        - '&l&eSKYWARS'
+        - '&l&6S&eKYWARS'
+        - '&l&fS&6K&eYWARS'
+        - '&l&fSK&6Y&eWARS'
+        - '&l&fSKY&6W&eARS'
+        - '&l&fSKYW&6A&eRS'
+        - '&l&fSKYWA&6R&eS'
+        - '&l&fSKYWA&6R&eS'
+        - '&l&fSKYWAR&6S'
+        - '&l&eSKYWARS'
+        - '&l&fSKYWARS'
+        - '&l&eSKYWARS'
+        - '&l&eSKYWARS'
+      lines:
+        - '&7{date}'
+        - '{blank}'
+        - '&fPlayers: &a{spawns}'
+        - '{blank}'
+        - '&fStarting in &a{seconds}s'
+        - '&fMap: {map}'
+        - '{blank}'
+        - '&ewww.server.net'
+    started:
+      title:
+        - '&l&eSKYWARS'
+        - '&l&6S&eKYWARS'
+        - '&l&fS&6K&eYWARS'
+        - '&l&fSK&6Y&eWARS'
+        - '&l&fSKY&6W&eARS'
+        - '&l&fSKYW&6A&eRS'
+        - '&l&fSKYWA&6R&eS'
+        - '&l&fSKYWA&6R&eS'
+        - '&l&fSKYWAR&6S'
+        - '&l&eSKYWARS'
+        - '&l&fSKYWARS'
+        - '&l&eSKYWARS'
+        - '&l&eSKYWARS'
+      lines:
+        - '&7{date}'
+        - '{blank}'
+        - '&fNext Event:'
+        - '&a{event} {refill}'
+        - '{blank}'
+        - '&fPlayers: &a{spawns}'
+        - '{blank}'
+        - '&fKills: {kills}'
+        - '{blank}'
+        - '&fMap: {map}'
+        - '{blank}'
+        - '&ewww.server.net'

@@ -1,0 +1,10 @@
+main: mr.emii.Main
+name: MrSkywars
+version: '1.0'
+description: Skywars Game
+author: MrEmii
+commands:
+  mrsk:
+    description: Main command for the plugin
+    usage: §a/mrsk <args...>
+    aliases: [skywarsadmin, adminsw, adminskywars, mrskywarsadmin]
